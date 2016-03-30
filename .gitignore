@@ -1,0 +1,10 @@
+target/
+.gradle
+*.class
+.DS_Store
+.idea/
+out/
+build/
+**/.sass-cache/*
+.asscache
+grails-app/assets/vendor/
