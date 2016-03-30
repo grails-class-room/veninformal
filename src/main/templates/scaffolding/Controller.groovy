@@ -13,10 +13,6 @@ class ${className}Controller {
         respond ${className}.list(params), model:[${propertyName}Count: ${className}.count()]
     }
 
-    def show(${className} ${propertyName}) {
-        respond ${propertyName}
-    }
-
     def create() {
         respond new ${className}(params)
     }
@@ -40,7 +36,7 @@ class ${className}Controller {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: '${propertyName}.label', default: '${className}'), ${propertyName}.id])
-                redirect ${propertyName}
+                redirect action:"index", method:"GET"
             }
             '*' { respond ${propertyName}, [status: CREATED] }
         }
@@ -69,7 +65,7 @@ class ${className}Controller {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: '${propertyName}.label', default: '${className}'), ${propertyName}.id])
-                redirect ${propertyName}
+                redirect action:"index", method:"GET"
             }
             '*'{ respond ${propertyName}, [status: OK] }
         }

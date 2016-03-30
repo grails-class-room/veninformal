@@ -1,0 +1,199 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F6F6;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------
+ *  Login
+ *---------------------------------------------------------- */
+
+.login-wrapper{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.login-wrapper .login-inner {
+    width: 320px;
+    height: 75%;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.wbs-widget{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.13);
+    border: 0;
+    margin-bottom: 30px;
+    background: #FFF;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.wbs-widget .panel-heading{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.login-brand {
+    color: #000;
+    margin-left: 0;
+    font-size: 1.375em;
+    text-align: center;
+}
+
+.login-brand span{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3F51B5;
+}
+
+.login-body .input-group-addon i{
+    color:#B1B1B1;
+}
+
+.login-footer a{
+    text-decoration: none;
+}
+
+@media (max-width: 767px){
+    .login-wrapper .login-inner{
+        padding: 0 15px;
+    }
+}
+
+/* ----------------------------------------------------------
+ *  Error Validate
+ *---------------------------------------------------------- */
+.error.form-control, .error.form-control:focus, .error.input-group-addon{
+    border-color: #F35454;
+}
+
+.error.form-control:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(233, 102, 102, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(233, 102, 102, 0.6);
+}
+span.error{
+    font-weight: bold;
+}
+
+label.error, span.error {
+    color: #F35454;
+    font-size: 12px;
+}
+
+
+.has-icon-right {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.has-icon-right>input {
+    padding-left: 6px;
+    padding-right: 36px;
+}
+
+.has-icon-right>[class*="fa-"], .has-icon-right>[class*="glyphicon-"] {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+    line-height: 28px;
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 3px;
+    zoom: 1;
+    filter: alpha(opacity=70);
+    -webkit-opacity: .7;
+    -moz-opacity: .7;
+    opacity: .7;
+}
+
+.has-icon-right>[class*="fa-"], .has-icon-right>[class*="glyphicon-"] {
+    left: auto;
+    right: 0;
+}
+
+/* ----------------------------------------------------------
+ *  Inputs
+ *---------------------------------------------------------- */
+.form-group label{
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.form-control{
+    border-radius: 0;
+    color: #666666;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+form .action-bar {
+    margin-top: 25px;
+}
+
+form fieldset legend{
+    padding: 8px 0;
+    opacity: 0.5;
+    text-indent: 3px;
+    font-size: 15px;
+}
+.input-group-addon{
+    border-radius: 0;
+}
+
+/* ----------------------------------------------------------
+ *  Buttons
+ *---------------------------------------------------------- */
+.btn-flat{
+    border-radius: 0!important;
+}
+
+/* ----------------------------------------------------------
+ *  Outros
+ *---------------------------------------------------------- */
+.help-content{
+    font-weight: 300;
+    font-size: 13px;
+}
+.help-content p{
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------
+ *  Login_bg
+ *---------------------------------------------------------- */
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

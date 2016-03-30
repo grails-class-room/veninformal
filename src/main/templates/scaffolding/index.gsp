@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="layout" content="main" />
-        <g:set var="entityName" value="\${message(code: '${propertyName}.label', default: '${className}')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
-    </head>
-    <body>
-        <a href="#list-${propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="\${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-            </ul>
+<head>
+    <meta name="layout" content="main"/>
+    <g:set var="entityName" value="\${message(code: '${propertyName}.label', default: '${className}')}"/>
+    <title><g:message code="default.list.label" args="[entityName]"/></title>
+</head>
+
+<body>
+    <button class="sidebar-toggle visible-xs" id="toggle-left-mini-aside">
+        <span class="glyphicon glyphicon-align-justify"></span>
+    </button>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 style="font-weight: 300;display: inline-block;"><g:message code="default.list.label"
+                                                                           args="[entityName]"/></h4>
+            <g:link action="create" class="btn btn-primary btn-flat btn-sm pull-right">
+                <i class="glyphicon glyphicon-plus"></i> <g:message code="default.create.label"
+                                                                    args="[entityName]"/>
+            </g:link>
         </div>
-        <div id="list-${propertyName}" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <g:if test="\${flash.message}">
-                <div class="message" role="status">\${flash.message}</div>
-            </g:if>
-            <f:table collection="\${${propertyName}List}" />
+
+        <div class="col-sm-12">
+            <f:table collection="\${${propertyName}List}"/>
 
             <div class="pagination">
-                <g:paginate total="\${${propertyName}Count ?: 0}" />
+                <g:paginate total="\${${propertyName}Count ?: 0}"/>
             </div>
         </div>
-    </body>
+    </div>
+<g:javascript>
+                WBSAPP.selectSideMenu("#${propertyName}SideOpt");
+</g:javascript>
+</body>
 </html>

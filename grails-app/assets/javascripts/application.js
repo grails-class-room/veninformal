@@ -6,19 +6,26 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery/dist/jquery.min.js
-//= require bootstrap/js/bootstrap.min.js
-//= require vue/dist/vue.min.js
-//= require vue/dist/vue.common.js
-//= require vue-resource/dist/vue-resource.min.js
+//= require bootstrap/dist/js/bootstrap.min.js
 //= require select2/dist/js/select2.min.js
+//= require vue/dist/vue.min.js
+//= require vue-resource/dist/vue-resource.min.js
+//= require app/vue.directives.js
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-    (function($) {
-        $('#spinner').ajaxStart(function() {
-            $(this).fadeIn();
-        }).ajaxStop(function() {
-            $(this).fadeOut();
-        });
-    })(jQuery);
-}
+var WBSAPP = (function(){
+    return {
+        selectSideMenu: selectSideMenu
+    };
+
+    function selectSideMenu(id){
+        $(".wbs-sidebar .nav").find("li.active").removeClass("active");
+        $(".wbs-sidebar .nav").find("li"+id).addClass("active");
+    }
+
+
+})();
+
+$(document).ready(function(){
+   $(".select2Apply").select2();
+});
